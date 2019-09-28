@@ -1,0 +1,90 @@
+
+
+html {
+    background-color:#262626;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.content {
+    border: solid;
+    max-width: 300px;
+    border-color: white;
+    border-width: 1px;
+    background-color:black;  
+    box-shadow: 5px 10px 10px black;
+    margin: auto;
+}
+
+h2 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    margin-left: -14%;
+}
+
+a:link, a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #b0b0b0;
+}
+ 
+li {
+    color:white;
+}
+
+/* Contact Part */
+
+input[type=text], select, textarea {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 14px;
+    width: 89%;
+    padding: 5px;
+    border: 1px solid white;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 14px;
+    max-width: 280px;
+    width: 100%;
+    background-color:black;
+    color: white;
+    padding: 10px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+  
+input[type=submit]:hover {
+    color: rgb(0, 255, 13);
+}
+
+.column {
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px;
+  }
+
+/* .row:after {
+    content: "";
+    display: table;
+    clear: both;
+} */
+
+@media screen and (max-width: 600px) {
+    input[type=submit] {
+      width: 93%;
+      margin-top: 0;
+    }
+}
