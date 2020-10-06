@@ -1,4 +1,4 @@
 # checkout my github https://github.com/bradybellini
 
 User-agent: *
-Disallow: /contact.html
+Allow: /
