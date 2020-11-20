@@ -12,6 +12,5 @@ group :jekyll_plugins do
     gem 'jekyll-sitemap', '~> 1.4'
     gem 'jemoji', '~> 0.12.0'
     gem 'jekyll-paginate-v2', '~> 3.0'
-    gem 'jekyll-commonmark', '~> 1.3'
   end
 gemspec

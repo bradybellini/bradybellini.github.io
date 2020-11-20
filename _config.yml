@@ -10,11 +10,6 @@ exclude:
 - mouse-trap.gemspec
 - .jekyll-cache
 
-markdown: CommonMark
-commonmark:
-  options: ["SMART", "FOOTNOTES"]
-  extensions: ["strikethrough", "autolink", "table", "tagfilter", "tasklist"]
-
 
 collections:
   posts:

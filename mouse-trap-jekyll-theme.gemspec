@@ -17,5 +17,4 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'jekyll-sitemap', '~> 1.4'
   spec.add_runtime_dependency 'jemoji', '~> 0.12.0'
   spec.add_runtime_dependency 'jekyll-paginate-v2', '~> 3.0'
-  spec.add_runtime_dependency 'jekyll-commonmark', '~> 1.3'
 end
