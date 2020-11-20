@@ -1,0 +1,20 @@
+<div class="main-latest">
+    <h3>Latest Blog Posts</h3>
+    {% for post in site.posts reversed limit:3 %}
+    <li>
+        <a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+    </li>
+    {% endfor %}
+    <li>
+        <a href="/blog">View all blog posts</a>
+    </li>
+    <h3>Latest Projects</h3>
+    {% for post in site.projects reversed limit:3 %}
+    <li>
+        <a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+    </li>
+    {% endfor %}
+    <li>
+        <a href="{{ site.baseurl }}/pro">View all projects</a>
+    </li>
+</div>

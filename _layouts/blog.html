@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<main>
+    <h2>{{page.title}}</h2>
+    <div class="blog-list">
+        {% for post in paginator.posts reversed%}
+        <li>
+            <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+        </li>
+        {% endfor %}
+    </div>
+    <div class="pagination">
+        {% if paginator.total_pages > 1 %}
+
+        {% if paginator.previous_page %}
+        <li>
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
+        </li>
+        {% endif %}
+        {% if paginator.next_page %}
+        <li>
+            <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
+        </li>
+        {% endif %}
+
+        {% endif %}
+    </div>
+
+</main>

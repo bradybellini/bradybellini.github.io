@@ -1,0 +1,13 @@
+<nav>
+    <a href="/"><u> <strong>{{site.title}}</strong></u></a>
+    {% for item in site.nav_header %}
+
+    {% if item.url contains '://' %}
+      {% assign url = item.url %}
+    {% else %}
+      {% assign url = item.url | relative_url %}
+    {% endif %}
+    <a href="{{url}}">{{item.title}}</a>
+    {% endfor %}
+
+</nav>

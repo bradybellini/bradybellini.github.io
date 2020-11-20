@@ -1,0 +1,107 @@
+exclude:
+- README.md
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- screenshot.png
+- LICENSE
+- CNAME
+- Gemfile
+- Gemfile.lock
+- mouse-trap.gemspec
+- .jekyll-cache
+
+markdown: CommonMark
+commonmark:
+  options: ["SMART", "FOOTNOTES"]
+  extensions: ["strikethrough", "autolink", "table", "tagfilter", "tasklist"]
+
+
+collections:
+  posts:
+    title: Posts
+    output: true
+    description: "My thoughts and ideas"
+    permalink: /:year/:long_month/:title:output_ext
+  projects:
+    title: Projects
+    output: true
+    permalink: /:year/:long_month/:title:output_ext
+  random:
+    title: Random
+    output: true
+    permalink: /:slug:output_ext
+
+
+encoding: utf-8
+lang: en-US
+permalink: pretty
+title: "mouse-trap"
+description: "mouse-trap is a minimal Jekyll theme based on a friendly mouse"
+url: "https://bradybellini.com"
+author: "Brady Bellini"
+baseurl: ""
+repo: "https://github.com/bradybellini/mouse-trap"
+email: "bbellini@pm.me"
+favicon: "/assets/svg/cheese.svg"
+
+
+pagination:
+  enabled: true
+  collection: "posts"
+  per_page: 20
+  permalink: "/page=:num/"
+  title: ":title - Page :num"
+  limit: 0
+  sort_field: "date"
+  sort_reverse: true
+
+
+sass:
+  style: compressed
+# permalink: pretty
+excerpt_separator: <!-- more -->
+# timezone: America/Los_Angeles # Timezone for blog posts and alike
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      image: "/assets/default-social-image.png" # Default image for sharing
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: default
+  -
+    scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: project # Set the default layout for pages
+
+nav_header:
+- title: Home
+  url: /
+- title: Blog
+  url: /blog/
+- title: Projects
+  url: /projects/
+- title: About
+  url: /about/
+
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jemoji
+  - jekyll-paginate-v2
+  
+  # https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md

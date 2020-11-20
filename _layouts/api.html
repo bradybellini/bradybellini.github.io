@@ -1,0 +1,28 @@
+---
+layout: null
+permalink: /api
+pagination:
+  permalink: ''
+  enabled: true
+  extension: .json
+  indexpage: 'posts-:num'
+---
+
+{
+  "pages": [{% for post in paginator.posts reversed%}
+    {% if forloop.first != true %},{% endif %}
+    {
+      "title": "{{ post.title }}",
+      "link": "{{ post.url }}"
+    }{% endfor %}
+  ],
+  {% if paginator.next_page %}
+  ,"next": "{{ paginator.next_page_path }}"
+  {% endif %}
+  {% if paginator.last_page %}
+  ,"prev": "{{ paginator.last_page_path }}"
+  {% endif %}
+  {% if paginator.first_page %}
+  ,"first": "{{ paginator.first_page_path }}"
+  {% endif %}
+}

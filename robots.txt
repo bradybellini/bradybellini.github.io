@@ -1,4 +1,5 @@
 # checkout my github https://github.com/bradybellini
+# or hire me ;p
 
 User-agent: *
 Allow: /
