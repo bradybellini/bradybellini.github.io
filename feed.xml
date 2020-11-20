@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://bradybellini.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bradybellini.com/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2020-11-20T07:14:04+00:00</updated><id>https://bradybellini.com/feed.xml</id><title type="html">mouse-trap</title><subtitle>mouse-trap is a minimal Jekyll theme based on a friendly mouse</subtitle><author><name>Brady Bellini</name></author><entry><title type="html">Markdown Styles</title><link href="https://bradybellini.com/2020/November/formatting-test.html" rel="alternate" type="text/html" title="Markdown Styles" /><published>2020-11-19T00:00:00+00:00</published><updated>2020-11-19T00:00:00+00:00</updated><id>https://bradybellini.com/2020/November/formatting-test</id><content type="html" xml:base="https://bradybellini.com/2020/November/formatting-test.html">&lt;h1&gt;Quick Reference&lt;/h1&gt;
+
+&lt;p&gt;Below are examples of all available structural elements that can be used in a kramdown text. Since
+the kramdown syntax is a superset of the Markdown syntax, only a small part of the available syntax
+is not available in standard Markdown syntax. Note, that only the most basic syntax information is
+given. However, a link to the detailed syntax for each element is provided (which also details the
+differences to the standard Markdown syntax). The quick reference is for version &lt;strong&gt;&amp;lt;%=
+::Kramdown::VERSION %&amp;gt;&lt;/strong&gt; of the syntax documentation.&lt;/p&gt;
+
+&lt;p&gt;kramdown has two main classes of elements: block and span-level elements. Block-level elements are
+used to create paragraphs, headers, lists and so on whereas span-level elements are used to markup
+text phrases as emphasized, as a link and so on.&lt;/p&gt;
+
+&lt;p&gt;All examples below feature the kramdown source, the converted &lt;abbr title=&quot;Hyper Text Markup Language&quot;&gt;HTML&lt;/abbr&gt; source (shown when hovering over
+the kramdown source) and the output as it appears in the browser. This looks like this:&lt;/p&gt;
+
+&lt;table class=&quot;kdexample&quot;&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;pre class=&quot;kdexample-before&quot;&gt;&lt;code&gt;kramdown example code&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td&gt;&lt;pre class=&quot;kdexample-after-source&quot;&gt;&lt;code&gt;Example code converted to &lt;abbr title=&quot;Hyper Text Markup Language&quot;&gt;HTML&lt;/abbr&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;kdexample-after-live&quot; style=&quot;clear:none&quot;&gt;
+Live browser view of example code
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;h1&gt;Block-level Elements - Main Structural Elements&lt;/h1&gt;
+
+&lt;h2&gt;Paragraphs&lt;/h2&gt;
+
+&lt;p&gt;{kdlink: {oid: paragraphs, part: “paragraphs”}}&lt;/p&gt;
+
+&lt;p&gt;Consecutive lines of text are considered to be one paragraph. As with other block level elements you
+have to add a blank line to separate it from the following block-level element:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}
+The first paragraph.&lt;/p&gt;
+
+&lt;p&gt;Another paragraph
+{kdexample}&lt;/p&gt;
+
+&lt;p&gt;Explicit line breaks in a paragraph can be made by using two spaces or two backslashes at the end of a line:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}
+This is a paragraph&lt;br /&gt;
+which contains a hard line break.
+{kdexample}&lt;/p&gt;
+
+&lt;h2&gt;Headers&lt;/h2&gt;
+
+&lt;p&gt;{kdlink: {oid: headers, part: “headers”}}&lt;/p&gt;
+
+&lt;p&gt;kramdown supports Setext style headers and atx style headers. A header must always be preceded by a
+blank line except at the beginning of the document:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}
+First level header
+==================&lt;/p&gt;
+
+&lt;h2&gt;Second level header&lt;/h2&gt;
+&lt;p&gt;{kdexample}&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}&lt;/p&gt;
+&lt;h1&gt;H1 header&lt;/h1&gt;
+
+&lt;h2&gt;H2 header&lt;/h2&gt;
+
+&lt;h3&gt;H3 header&lt;/h3&gt;
+
+&lt;h4&gt;H4 header&lt;/h4&gt;
+
+&lt;h5&gt;H5 header&lt;/h5&gt;
+
+&lt;h6&gt;H6 header&lt;/h6&gt;
+&lt;p&gt;{kdexample}&lt;/p&gt;
+
+&lt;p&gt;If you set the option &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;auto_ids&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;false&lt;/code&gt; (for example, by using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;options&lt;/code&gt; extension, see
+&lt;a href=&quot;#extensions&quot;&gt;Extensions&lt;/a&gt;), then the automatic header ID generation is turned off:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}
+&lt;/p&gt;
+
+&lt;h1&gt;A header without an ID&lt;/h1&gt;
+&lt;p&gt;{kdexample}&lt;/p&gt;
+
+&lt;h2&gt;Blockquotes&lt;/h2&gt;
+
+&lt;p&gt;{kdlink: {oid: blockquotes, part: “blockquotes”}}&lt;/p&gt;
+
+&lt;p&gt;A blockquote is started using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt; marker followed by an optional space; all following lines that
+are also started with the blockquote marker belong to the blockquote. You can use any block-level
+elements inside a blockquote:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;A sample blockquote.&lt;/p&gt;
+
+  &lt;blockquote&gt;
+    &lt;p&gt;Nested blockquotes are
+also possible.&lt;/p&gt;
+  &lt;/blockquote&gt;
+
+  &lt;h2&gt;Headers work too&lt;/h2&gt;
+  &lt;p&gt;This is the outer quote again.
+{kdexample}&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;You may also be lazy with the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt; markers as long as there is no blank line:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;This is a blockquote
+continued on this
+and this line.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;But this is a separate paragraph.
+{kdexample}&lt;/p&gt;
+
+&lt;h2&gt;Code Blocks&lt;/h2&gt;
+
+&lt;p&gt;{kdlink: {oid: code-blocks, part: “code blocks”}}&lt;/p&gt;
+
+&lt;p&gt;kramdown supports two different code block styles. One uses lines indented with either four spaces
+or one tab whereas the other uses lines with tilde characters as delimiters – therefore the content
+does not need to be indented:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}
+    This is a sample code block.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Continued here. {kdexample}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;{kdexample::}&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;This is also a code block.
+~~~
+Ending lines must have at least as
+many tildes as the starting line.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;{kdexample}&lt;/p&gt;
+
+&lt;p&gt;The following is a code block with a language specified:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}&lt;/p&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;what?&lt;/span&gt;
+  &lt;span class=&quot;mi&quot;&gt;42&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;{kdexample}&lt;/p&gt;
+
+&lt;h2&gt;Horizontal Rules&lt;/h2&gt;
+
+&lt;p&gt;{kdlink: {oid: horizontal-rules, part: “horizontal rules”}}&lt;/p&gt;
+
+&lt;p&gt;It is easy to insert a horizontal rule in kramdown: just use three or more asterisks, dashes or
+underscores, optionally separated by spaces or tabs, on an otherwise blank line:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;-–&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;{kdexample}&lt;/p&gt;
+
+&lt;h2&gt;Lists&lt;/h2&gt;
+
+&lt;p&gt;{kdlink: {oid: lists, part: “lists”}}&lt;/p&gt;
+
+&lt;p&gt;kramdown supports ordered and unordered lists. Ordered lists are started by using a number followed
+by a period, a space and then the list item text. The content of a list item consists of block-level
+elements. All lines which have the same indent as the text of the line with the list marker belong
+to the list item:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;This is a list item&lt;/li&gt;
+  &lt;li&gt;And another item&lt;/li&gt;
+  &lt;li&gt;And the third one
+with additional text
+{kdexample}&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;As with block quotes, you may be lazy when using the list item marker:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;A list item
+with additional text
+{kdexample}&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As the content consists of block-level elements you can do things like the following:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;This is a list item&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;with a blockquote&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;h1&gt;And a header&lt;/h1&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Followed by another item
+{kdexample}&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Nested lists are also easy to create:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Item one
+    &lt;ol&gt;
+      &lt;li&gt;sub item one&lt;/li&gt;
+      &lt;li&gt;sub item two&lt;/li&gt;
+      &lt;li&gt;sub item three&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Item two
+{kdexample}&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Lists can occur directly after other block-level elements, however, there has to be at least one
+blank line if you want to follow a paragraph with a list:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}
+This is a paragraph.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;This is NOT a list.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;This is a list!
+{kdexample}&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Unordered lists are started by using an asterisk, a dash or a plus sign (they can be mixed) and a
+space. Apart from that unordered lists follow the same rules as ordered lists:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Item one&lt;/li&gt;
+  &lt;li&gt;Item two&lt;/li&gt;
+  &lt;li&gt;Item three
+{kdexample}&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Definition Lists&lt;/h2&gt;
+
+&lt;p&gt;{kdlink: {oid: definition-lists, part: “definition lists”}}&lt;/p&gt;
+
+&lt;p&gt;A definition list works similar to a normal list and is used to associate definitions with terms.
+Definition lists are started when a normal paragraph is followed by a line starting with a colon and
+then the definition text. One term can have many definitions and multiple terms can have the same
+definition. Each line of the preceding paragraph is assumed to contain one term, for example:&lt;/p&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;{kdexample::}&lt;/dt&gt;
+  &lt;dt&gt;term&lt;/dt&gt;
+  &lt;dd&gt;definition&lt;/dd&gt;
+  &lt;dd&gt;another definition&lt;/dd&gt;
+  &lt;dt&gt;another term&lt;/dt&gt;
+  &lt;dt&gt;and another term&lt;/dt&gt;
+  &lt;dd&gt;and a definition for the term
+{kdexample}&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;p&gt;If you insert a blank line before a definition (note: there must only be one blank line between the
+terms and the first definition), the definition will be wrapped in a paragraph:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}
+term&lt;/p&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;: definition&lt;/dt&gt;
+  &lt;dd&gt;definition
+{kdexample}&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;p&gt;Each term can be styled using span-level elements and each definition is parsed as block-level
+elements, i.e. you can use any block-level in a definition. Just use the same indent for the lines
+following the definition line:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}
+This &lt;em&gt;is&lt;/em&gt; a term&lt;/p&gt;
+
+&lt;p&gt;: This will be a para&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;a blockquote&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;# A header
+{kdexample}&lt;/p&gt;
+
+&lt;h2&gt;Tables&lt;/h2&gt;
+
+&lt;p&gt;{kdlink: {oid: tables, part: “tables”}}&lt;/p&gt;
+
+&lt;p&gt;kramdown supports a syntax for creating simple tables. A line starting with a pipe character (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;|&lt;/code&gt;)
+starts a table row. However, if the pipe characters is immediately followed by a dash (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-&lt;/code&gt;), a
+separator line is created. Separator lines are used to split the table header from the table body
+(and optionally align the table columns) and to split the table body into multiple parts. If the
+pipe character is followed by an equal sign (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;=&lt;/code&gt;), the tables rows below it are part of the table
+footer.&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}
+| A simple | table |
+| with multiple | lines|
+{kdexample}&lt;/p&gt;
+
+&lt;p rules=&quot;groups&quot;&gt;{kdexample::}
+| Header1 | Header2 | Header3 |
+|:——–|:——-:|——–:|
+| cell1   | cell2   | cell3   |
+| cell4   | cell5   | cell6   |
+|—-
+| cell1   | cell2   | cell3   |
+| cell4   | cell5   | cell6   |
+|=====
+| Foot1   | Foot2   | Foot3&lt;/p&gt;
+&lt;p&gt;{kdexample}&lt;/p&gt;
+
+&lt;h2&gt;&lt;abbr title=&quot;Hyper Text Markup Language&quot;&gt;HTML&lt;/abbr&gt; elements&lt;/h2&gt;
+
+&lt;p&gt;{kdlink: {oid: html-blocks, part: “&lt;abbr title=&quot;Hyper Text Markup Language&quot;&gt;HTML&lt;/abbr&gt; blocks”}}&lt;/p&gt;
+
+&lt;p&gt;kramdown allows you to use block-level &lt;abbr title=&quot;Hyper Text Markup Language&quot;&gt;HTML&lt;/abbr&gt; tags (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;div&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;p&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pre&lt;/code&gt;, …) to markup whole blocks of
+text – just start a line with a block-level &lt;abbr title=&quot;Hyper Text Markup Language&quot;&gt;HTML&lt;/abbr&gt; tag. kramdown syntax is normally not processed
+inside an &lt;abbr title=&quot;Hyper Text Markup Language&quot;&gt;HTML&lt;/abbr&gt; tag but this can be changed with the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;parse_block_html&lt;/code&gt; option. If this options is
+set to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;true&lt;/code&gt;, then the content of a block-level &lt;abbr title=&quot;Hyper Text Markup Language&quot;&gt;HTML&lt;/abbr&gt; tag is parsed by kramdown either as block
+level or span-level text, depending on the tag:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}&lt;/p&gt;
+&lt;div style=&quot;float: right&quot;&gt;
+Something that stays right and is not wrapped in a para.
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;p&gt;This is wrapped in a para.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;
+This can contain only &lt;em&gt;span&lt;/em&gt; level elements.
+&lt;/p&gt;
+&lt;p&gt;{kdexample}&lt;/p&gt;
+
+&lt;h2&gt;Block Attributes&lt;/h2&gt;
+
+&lt;p&gt;{kdlink: {oid: block-ials, part: “block IALs”}}
+{kdlink: {oid: attribute-list-definitions, part: “ALDs”}}&lt;/p&gt;
+
+&lt;p&gt;You can assign any attribute to a block-level element. Just directly follow the block with a &lt;em&gt;block
+inline attribute list&lt;/em&gt; (or short: block IAL). A block IAL consists of a left curly brace, followed
+by a colon, the attribute definitions and a right curly brace. Here is a simple example which sets the
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;title&lt;/code&gt; attribute of a block quote:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}&lt;/p&gt;
+&lt;blockquote title=&quot;Blockquote title&quot;&gt;
+  &lt;p&gt;A nice blockquote&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;{kdexample}&lt;/p&gt;
+
+&lt;p&gt;As one often wants to set one or more CSS classes on an element, there is an easy shortcut:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}&lt;/p&gt;
+&lt;blockquote class=&quot;class1 class2&quot;&gt;
+  &lt;p&gt;A nice blockquote&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;{kdexample}&lt;/p&gt;
+
+&lt;p&gt;A shortcut for setting the ID is also provided. Just prefix the ID with a hash symbol:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}&lt;/p&gt;
+&lt;blockquote id=&quot;with-an-id&quot;&gt;
+  &lt;p&gt;A nice blockquote&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;{kdexample}&lt;/p&gt;
+
+&lt;p&gt;Sometimes one wants to use the same attributes for many elements. kramdown allows you to define the
+attributes in one place with an &lt;em&gt;attribute list definition&lt;/em&gt; (or short: ALD) and just reference this
+definition in a block IAL. An ALD has the same structure as a block IAL but the colon has to be
+replace with a colon, the reference name and another colon. By just using the reference name as-is
+in a block IAL, one can include the attributes of the referenced ALD:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}&lt;/p&gt;
+&lt;p class=&quot;c1 c2 c1 c2&quot; id=&quot;id&quot; title=&quot;title&quot;&gt;paragraph&lt;/p&gt;
+&lt;p&gt;{kdexample}&lt;/p&gt;
+
+&lt;p&gt;The order in a block IAL or ALD is important because later defined attributes overwrite (with the
+exception of the shortcut for CSS classes) prior defined attributes:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}&lt;/p&gt;
+&lt;p class=&quot;c1 c2 c1 c2 c3&quot; id=&quot;para&quot; title=&quot;t&quot;&gt;paragraph&lt;/p&gt;
+&lt;p&gt;{kdexample}&lt;/p&gt;
+
+&lt;h2&gt;Extensions&lt;/h2&gt;
+
+&lt;p&gt;{kdlink: {oid: extensions, part: “extensions”}}&lt;/p&gt;
+
+&lt;p&gt;kramdown provides some less used functionality through a common syntax. This will allow the easy
+addition of other extensions if need arises. Currently, there are extensions for ignoring text (i.e.
+treating text as comment), for inserting arbitrary text as-is into the output and for setting
+kramdown options.&lt;/p&gt;
+
+&lt;p&gt;Here is an example that shows how to insert comments into text:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}
+This is a paragraph
+&lt;!-- 
+This is a comment which is
+completely ignored.
+ --&gt;
+… paragraph continues here.&lt;/p&gt;
+
+&lt;p&gt;Extensions can also be used
+inline **see**!
+{kdexample}&lt;/p&gt;
+
+&lt;p&gt;As one can see from the above example, the syntax for extensions is nearly identical to that of
+ALDs. However, there is no trailing colon after the extension name and the extension end tag needs a
+slash between the colon and the extension name. One can also use the short form of the end tag, i.e.
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{:/}&lt;/code&gt;. Attribute definitions can be specified on the start tag by separating them with a space from
+the extension name. Also, if the extension does not have a body, there needs to be a slash right
+before the closing brace:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}
+&lt;/p&gt;
+
+&lt;h1&gt;Header without id&lt;/h1&gt;
+&lt;p&gt;{kdexample}&lt;/p&gt;
+
+&lt;h1&gt;Span-Level Elements - Text Modifiers&lt;/h1&gt;
+
+&lt;h2&gt;Emphasis&lt;/h2&gt;
+
+&lt;p&gt;{kdlink: {oid: emphasis, part: “emphasis”}}&lt;/p&gt;
+
+&lt;p&gt;Emphasis can be added to text by surrounding the text with either asterisks or underscores:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}
+This is &lt;em&gt;emphasized&lt;/em&gt;,
+&lt;em&gt;this&lt;/em&gt; too!
+{kdexample}&lt;/p&gt;
+
+&lt;p&gt;Strong emphasis can be done by doubling the delimiters:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}
+This is &lt;strong&gt;strong&lt;/strong&gt;,
+&lt;strong&gt;this&lt;/strong&gt; too!
+{kdexample}&lt;/p&gt;
+
+&lt;p&gt;The form with the asterisks can also be used to markup parts of words:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}
+This w&lt;strong&gt;ork&lt;/strong&gt;s as expected!
+{kdexample}&lt;/p&gt;
+
+&lt;h2&gt;Links and Images&lt;/h2&gt;
+
+&lt;p&gt;{kdlink: {oid: links-and-images, part: “links and images”}}&lt;/p&gt;
+
+&lt;p&gt;A simple link can be created by surrounding the text with square brackets and the link URL with
+parentheses:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}
+A &lt;a href=&quot;http://kramdown.gettalong.org&quot;&gt;link&lt;/a&gt;
+to the kramdown homepage.
+{kdexample}&lt;/p&gt;
+
+&lt;p&gt;You can also add title information to the link:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}
+A &lt;a href=&quot;http://kramdown.gettalong.org&quot; title=&quot;hp&quot;&gt;link&lt;/a&gt;
+to the homepage.
+{kdexample}&lt;/p&gt;
+
+&lt;p&gt;There is another way to create links which does not interrupt the text flow. The URL and title are
+defined using a reference name and this reference name is then used in square brackets instead of
+the link URL:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}
+A &lt;a href=&quot;http://kramdown.gettalong.org&quot; title=&quot;hp&quot;&gt;link&lt;/a&gt;
+to the homepage.&lt;/p&gt;
+
+&lt;p&gt;{kdexample}&lt;/p&gt;
+
+&lt;p&gt;If the link text itself is the reference name, the second set of square brackets can be omitted:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}
+A link to the &lt;a href=&quot;http://kramdown.gettalong.org&quot; title=&quot;hp&quot;&gt;kramdown hp&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;{kdexample}&lt;/p&gt;
+
+&lt;p&gt;Images can be created in a similar way: just use an exclamation mark before the square brackets. The
+link text will become the alternative text of the image and the link URL specifies the image source:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}
+An image: &lt;img src=&quot;img/image.jpg&quot; alt=&quot;gras&quot; /&gt;
+{kdexample}&lt;/p&gt;
+
+&lt;h2&gt;Inline Code&lt;/h2&gt;
+
+&lt;p&gt;{kdlink: {oid: code-spans, part: “code spans”}}&lt;/p&gt;
+
+&lt;p&gt;Text phrases can be easily marked up as code by surrounding them with backticks:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}
+Use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Kramdown::Document.new(text).to_html&lt;/code&gt;
+to convert the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;text&lt;/code&gt; in kramdown
+syntax to &lt;abbr title=&quot;Hyper Text Markup Language&quot;&gt;HTML&lt;/abbr&gt;.
+{kdexample}&lt;/p&gt;
+
+&lt;p&gt;If you want to use literal backticks in your code, just use two or more backticks as delimiters. The
+space right after the beginning delimiter and the one right before the closing delimiter are ignore:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}
+Use backticks to markup code,
+e.g. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;`code`&lt;/code&gt;.
+{kdexample}&lt;/p&gt;
+
+&lt;h2&gt;Footnotes&lt;/h2&gt;
+
+&lt;p&gt;{kdlink: {oid: footnotes, part: “footnotes”}}&lt;/p&gt;
+
+&lt;p&gt;Footnotes can easily be used in kramdown. Just set a footnote marker (consists of square brackets
+with a caret and the footnote name inside) in the text and somewhere else the footnote definition (which
+basically looks like a reference link definition):&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}
+This is a text with a
+footnote&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;{kdexample}&lt;/p&gt;
+
+&lt;p&gt;The footnote definition can contain any block-level element, all lines following a footnote
+definition indented with four spaces or one tab belong to the definition:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}
+This is a text with a
+footnote&lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;As can be seen above the footnote name is only used for the anchors and the numbering is done
+automatically in document order.  Repeated footnote markers will link to the same footnote
+definition.&lt;/p&gt;
+
+&lt;h2&gt;Abbreviations&lt;/h2&gt;
+
+&lt;p&gt;{kdlink: {oid: abbreviations, part: “abbreviations”}}&lt;/p&gt;
+
+&lt;p&gt;Abbreviations will work out of the box once you add an abbreviation definition. So you can just
+write the text and add the definitions later on.&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}
+This is an &lt;abbr title=&quot;Hyper Text Markup Language&quot;&gt;HTML&lt;/abbr&gt;
+example.&lt;/p&gt;
+
+&lt;p&gt;{kdexample}&lt;/p&gt;
+
+&lt;h2&gt;&lt;abbr title=&quot;Hyper Text Markup Language&quot;&gt;HTML&lt;/abbr&gt; Elements&lt;/h2&gt;
+
+&lt;p&gt;{kdlink: {oid: html-spans, part: “&lt;abbr title=&quot;Hyper Text Markup Language&quot;&gt;HTML&lt;/abbr&gt; spans”}}&lt;/p&gt;
+
+&lt;p&gt;&lt;abbr title=&quot;Hyper Text Markup Language&quot;&gt;HTML&lt;/abbr&gt; is not only supported on the block-level but also on the span-level:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}
+This is &lt;span style=&quot;color: red&quot;&gt;written in
+red&lt;/span&gt;.
+{kdexample}&lt;/p&gt;
+
+&lt;h2&gt;Inline Attributes&lt;/h2&gt;
+
+&lt;p&gt;{kdlink: {oid: span-ials, part: “span IALs”}}&lt;/p&gt;
+
+&lt;p&gt;As with a block-level element you can assign any attribute to a span-level elements using a &lt;em&gt;span
+inline attribute list&lt;/em&gt; (or short: span IAL). A span IAL has the same syntax as a block IAL and must
+immediately follow the span-level element:&lt;/p&gt;
+
+&lt;p&gt;{kdexample::}
+This is &lt;em style=&quot;color: red&quot;&gt;red&lt;/em&gt;.
+{kdexample}&lt;/p&gt;
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;And here is the definition. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot; role=&quot;doc-endnote&quot;&gt;
+
+      &lt;p&gt;And here is the definition.&lt;/p&gt;
+
+      &lt;blockquote&gt;
+        &lt;p&gt;With a quote!
+{kdexample}&lt;/p&gt;
+      &lt;/blockquote&gt;
+      &lt;p&gt;&lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Brady Bellini</name></author><category term="test" /><category term="test" /><summary type="html">Quick Reference Below are examples of all available structural elements that can be used in a kramdown text. Since the kramdown syntax is a superset of the Markdown syntax, only a small part of the available syntax is not available in standard Markdown syntax. Note, that only the most basic syntax information is given. However, a link to the detailed syntax for each element is provided (which also details the differences to the standard Markdown syntax). The quick reference is for version &amp;lt;%= ::Kramdown::VERSION %&amp;gt; of the syntax documentation. kramdown has two main classes of elements: block and span-level elements. Block-level elements are used to create paragraphs, headers, lists and so on whereas span-level elements are used to markup text phrases as emphasized, as a link and so on. All examples below feature the kramdown source, the converted HTML source (shown when hovering over the kramdown source) and the output as it appears in the browser. This looks like this: kramdown example code Example code converted to HTML Live browser view of example code Block-level Elements - Main Structural Elements Paragraphs {kdlink: {oid: paragraphs, part: “paragraphs”}} Consecutive lines of text are considered to be one paragraph. As with other block level elements you have to add a blank line to separate it from the following block-level element: {kdexample::} The first paragraph. Another paragraph {kdexample} Explicit line breaks in a paragraph can be made by using two spaces or two backslashes at the end of a line: {kdexample::} This is a paragraph which contains a hard line break. {kdexample} Headers {kdlink: {oid: headers, part: “headers”}} kramdown supports Setext style headers and atx style headers. A header must always be preceded by a blank line except at the beginning of the document: {kdexample::} First level header ================== Second level header {kdexample} {kdexample::} H1 header H2 header H3 header H4 header H5 header H6 header {kdexample} If you set the option auto_ids to false (for example, by using the options extension, see Extensions), then the automatic header ID generation is turned off: {kdexample::} A header without an ID {kdexample} Blockquotes {kdlink: {oid: blockquotes, part: “blockquotes”}} A blockquote is started using the &amp;gt; marker followed by an optional space; all following lines that are also started with the blockquote marker belong to the blockquote. You can use any block-level elements inside a blockquote: {kdexample::} A sample blockquote. Nested blockquotes are also possible. Headers work too This is the outer quote again. {kdexample} You may also be lazy with the &amp;gt; markers as long as there is no blank line: {kdexample::} This is a blockquote continued on this and this line. But this is a separate paragraph. {kdexample} Code Blocks {kdlink: {oid: code-blocks, part: “code blocks”}} kramdown supports two different code block styles. One uses lines indented with either four spaces or one tab whereas the other uses lines with tilde characters as delimiters – therefore the content does not need to be indented: {kdexample::} This is a sample code block. Continued here. {kdexample} {kdexample::} This is also a code block. ~~~ Ending lines must have at least as many tildes as the starting line. {kdexample} The following is a code block with a language specified: {kdexample::} def what? 42 end {kdexample} Horizontal Rules {kdlink: {oid: horizontal-rules, part: “horizontal rules”}} It is easy to insert a horizontal rule in kramdown: just use three or more asterisks, dashes or underscores, optionally separated by spaces or tabs, on an otherwise blank line: {kdexample::} -– {kdexample} Lists {kdlink: {oid: lists, part: “lists”}} kramdown supports ordered and unordered lists. Ordered lists are started by using a number followed by a period, a space and then the list item text. The content of a list item consists of block-level elements. All lines which have the same indent as the text of the line with the list marker belong to the list item: {kdexample::} This is a list item And another item And the third one with additional text {kdexample} As with block quotes, you may be lazy when using the list item marker: {kdexample::} A list item with additional text {kdexample} As the content consists of block-level elements you can do things like the following: {kdexample::} This is a list item with a blockquote And a header Followed by another item {kdexample} Nested lists are also easy to create: {kdexample::} Item one sub item one sub item two sub item three Item two {kdexample} Lists can occur directly after other block-level elements, however, there has to be at least one blank line if you want to follow a paragraph with a list: {kdexample::} This is a paragraph. This is NOT a list. This is a list! {kdexample} Unordered lists are started by using an asterisk, a dash or a plus sign (they can be mixed) and a space. Apart from that unordered lists follow the same rules as ordered lists: {kdexample::} Item one Item two Item three {kdexample} Definition Lists {kdlink: {oid: definition-lists, part: “definition lists”}} A definition list works similar to a normal list and is used to associate definitions with terms. Definition lists are started when a normal paragraph is followed by a line starting with a colon and then the definition text. One term can have many definitions and multiple terms can have the same definition. Each line of the preceding paragraph is assumed to contain one term, for example: {kdexample::} term definition another definition another term and another term and a definition for the term {kdexample} If you insert a blank line before a definition (note: there must only be one blank line between the terms and the first definition), the definition will be wrapped in a paragraph: {kdexample::} term : definition definition {kdexample} Each term can be styled using span-level elements and each definition is parsed as block-level elements, i.e. you can use any block-level in a definition. Just use the same indent for the lines following the definition line: {kdexample::} This is a term : This will be a para a blockquote # A header {kdexample} Tables {kdlink: {oid: tables, part: “tables”}} kramdown supports a syntax for creating simple tables. A line starting with a pipe character (|) starts a table row. However, if the pipe characters is immediately followed by a dash (-), a separator line is created. Separator lines are used to split the table header from the table body (and optionally align the table columns) and to split the table body into multiple parts. If the pipe character is followed by an equal sign (=), the tables rows below it are part of the table footer. {kdexample::} | A simple | table | | with multiple | lines| {kdexample} {kdexample::} | Header1 | Header2 | Header3 | |:——–|:——-:|——–:| | cell1 | cell2 | cell3 | | cell4 | cell5 | cell6 | |—- | cell1 | cell2 | cell3 | | cell4 | cell5 | cell6 | |===== | Foot1 | Foot2 | Foot3 {kdexample} HTML elements {kdlink: {oid: html-blocks, part: “HTML blocks”}} kramdown allows you to use block-level HTML tags (div, p, pre, …) to markup whole blocks of text – just start a line with a block-level HTML tag. kramdown syntax is normally not processed inside an HTML tag but this can be changed with the parse_block_html option. If this options is set to true, then the content of a block-level HTML tag is parsed by kramdown either as block level or span-level text, depending on the tag: {kdexample::} Something that stays right and is not wrapped in a para. This is wrapped in a para. This can contain only span level elements. {kdexample} Block Attributes {kdlink: {oid: block-ials, part: “block IALs”}} {kdlink: {oid: attribute-list-definitions, part: “ALDs”}} You can assign any attribute to a block-level element. Just directly follow the block with a block inline attribute list (or short: block IAL). A block IAL consists of a left curly brace, followed by a colon, the attribute definitions and a right curly brace. Here is a simple example which sets the title attribute of a block quote: {kdexample::} A nice blockquote {kdexample} As one often wants to set one or more CSS classes on an element, there is an easy shortcut: {kdexample::} A nice blockquote {kdexample} A shortcut for setting the ID is also provided. Just prefix the ID with a hash symbol: {kdexample::} A nice blockquote {kdexample} Sometimes one wants to use the same attributes for many elements. kramdown allows you to define the attributes in one place with an attribute list definition (or short: ALD) and just reference this definition in a block IAL. An ALD has the same structure as a block IAL but the colon has to be replace with a colon, the reference name and another colon. By just using the reference name as-is in a block IAL, one can include the attributes of the referenced ALD: {kdexample::} paragraph {kdexample} The order in a block IAL or ALD is important because later defined attributes overwrite (with the exception of the shortcut for CSS classes) prior defined attributes: {kdexample::} paragraph {kdexample} Extensions {kdlink: {oid: extensions, part: “extensions”}} kramdown provides some less used functionality through a common syntax. This will allow the easy addition of other extensions if need arises. Currently, there are extensions for ignoring text (i.e. treating text as comment), for inserting arbitrary text as-is into the output and for setting kramdown options. Here is an example that shows how to insert comments into text: {kdexample::} This is a paragraph … paragraph continues here. Extensions can also be used inline **see**! {kdexample} As one can see from the above example, the syntax for extensions is nearly identical to that of ALDs. However, there is no trailing colon after the extension name and the extension end tag needs a slash between the colon and the extension name. One can also use the short form of the end tag, i.e. {:/}. Attribute definitions can be specified on the start tag by separating them with a space from the extension name. Also, if the extension does not have a body, there needs to be a slash right before the closing brace: {kdexample::} Header without id {kdexample} Span-Level Elements - Text Modifiers Emphasis {kdlink: {oid: emphasis, part: “emphasis”}} Emphasis can be added to text by surrounding the text with either asterisks or underscores: {kdexample::} This is emphasized, this too! {kdexample} Strong emphasis can be done by doubling the delimiters: {kdexample::} This is strong, this too! {kdexample} The form with the asterisks can also be used to markup parts of words: {kdexample::} This works as expected! {kdexample} Links and Images {kdlink: {oid: links-and-images, part: “links and images”}} A simple link can be created by surrounding the text with square brackets and the link URL with parentheses: {kdexample::} A link to the kramdown homepage. {kdexample} You can also add title information to the link: {kdexample::} A link to the homepage. {kdexample} There is another way to create links which does not interrupt the text flow. The URL and title are defined using a reference name and this reference name is then used in square brackets instead of the link URL: {kdexample::} A link to the homepage. {kdexample} If the link text itself is the reference name, the second set of square brackets can be omitted: {kdexample::} A link to the kramdown hp. {kdexample} Images can be created in a similar way: just use an exclamation mark before the square brackets. The link text will become the alternative text of the image and the link URL specifies the image source: {kdexample::} An image: {kdexample} Inline Code {kdlink: {oid: code-spans, part: “code spans”}} Text phrases can be easily marked up as code by surrounding them with backticks: {kdexample::} Use Kramdown::Document.new(text).to_html to convert the text in kramdown syntax to HTML. {kdexample} If you want to use literal backticks in your code, just use two or more backticks as delimiters. The space right after the beginning delimiter and the one right before the closing delimiter are ignore: {kdexample::} Use backticks to markup code, e.g. `code`. {kdexample} Footnotes {kdlink: {oid: footnotes, part: “footnotes”}} Footnotes can easily be used in kramdown. Just set a footnote marker (consists of square brackets with a caret and the footnote name inside) in the text and somewhere else the footnote definition (which basically looks like a reference link definition): {kdexample::} This is a text with a footnote1. {kdexample} The footnote definition can contain any block-level element, all lines following a footnote definition indented with four spaces or one tab belong to the definition: {kdexample::} This is a text with a footnote2. As can be seen above the footnote name is only used for the anchors and the numbering is done automatically in document order. Repeated footnote markers will link to the same footnote definition. Abbreviations {kdlink: {oid: abbreviations, part: “abbreviations”}} Abbreviations will work out of the box once you add an abbreviation definition. So you can just write the text and add the definitions later on. {kdexample::} This is an HTML example. {kdexample} HTML Elements {kdlink: {oid: html-spans, part: “HTML spans”}} HTML is not only supported on the block-level but also on the span-level: {kdexample::} This is written in red. {kdexample} Inline Attributes {kdlink: {oid: span-ials, part: “span IALs”}} As with a block-level element you can assign any attribute to a span-level elements using a span inline attribute list (or short: span IAL). A span IAL has the same syntax as a block IAL and must immediately follow the span-level element: {kdexample::} This is red. {kdexample} And here is the definition. &amp;#8617; And here is the definition. With a quote! {kdexample} &amp;#8617;</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://bradybellini.com/assets/default-social-image.png" /><media:content medium="image" url="https://bradybellini.com/assets/default-social-image.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

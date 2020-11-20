@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/bbellini
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://bradybellini.com
+  * I am bbellini (https://keybase.io/bbellini) on keybase.
+  * I have a public key ASDWXS_F5rZejf1hy-5UMEpOhs4jW63kSRATYyXo_l8CKQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120d65d2fc5e6b65e8dfd61cbee54304a4e86ce235bade44910136325e8fe5f02290a",
+      "host": "keybase.io",
+      "kid": "0120d65d2fc5e6b65e8dfd61cbee54304a4e86ce235bade44910136325e8fe5f02290a",
+      "uid": "ee1eca3f060131fce2e3b60851e9f019",
+      "username": "bbellini"
+    },
+    "merkle_root": {
+      "ctime": 1601602297,
+      "hash": "c5339bf54dc77b789a0f8530b0f788332313a01fc20764f7edd1215c090039aa4ed67d413fe414d8803e4d8bbdad0b693abe720aad95f21d7946c335fbd948c8",
+      "hash_meta": "f294f9d0cdcd5a151acf9c9c1af3e9f092cebc22905a8e2076b82964c11a101c",
+      "seqno": 17725594
+    },
+    "service": {
+      "entropy": "BVt4B5g54QSmJ2sMXb2dhOLT",
+      "hostname": "bradybellini.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.5.0"
+  },
+  "ctime": 1601602372,
+  "expire_in": 504576000,
+  "prev": "61fdc99806221c208cb46e5a269f52567163ff077e72797f27d83fb6f7860730",
+  "seqno": 5,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg1l0vxea2Xo39YcvuVDBKTobOI1ut5EkQE2Ml6P5fAikKp3BheWxvYWTESpcCBcQgYf3JmAYiHCCMtG5aJp9SVnFj/wd+cnl/J9g/tveGBzDEIL1RtX6mA99CmB7om8qEDmN7TQfShvkV2toJfMqQfYhTAgHCo3NpZ8RAdBbabeUk+wkAvdzCSHIeG3ZqqKeMpjldG60TVll97cm4aPWj4uT2KDeUmlrs6nA/SsS3uKaeXFkX+R9HvNarCahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEII00hkcIISSCth3mat8C9wovoqazb/7ojGXdZZK7xH+oo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/bbellini
+
+==================================================================

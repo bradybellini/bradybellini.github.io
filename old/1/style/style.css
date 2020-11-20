@@ -1,0 +1,69 @@
+
+html {
+    background-color:#262626;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.content {
+    border: solid;
+    max-width: 275px;
+    border-color: white;
+    border-width: 1px;
+    background-color:black;  
+    box-shadow: 5px 10px 10px black;
+    margin: 0;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+
+h2 {
+    color: white;
+}
+
+p {
+    margin-top: -8%;
+}
+
+ul {
+    list-style-type: none;
+    margin-left: -10%;
+}
+
+a:link, a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #b0b0b0;
+}
+ 
+li {
+    color:white;
+}
+
+.alert {
+    padding: 10px;
+    background-color: #00ff62;
+    color: black;
+  }
+  
+.closebtn a{
+    margin-left: 10px;
+    color: black;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+.closebtn:hover {
+    color: black;
+  }
